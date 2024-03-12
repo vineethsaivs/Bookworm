@@ -67,3 +67,37 @@ This script is crucial for understanding which files are most relevant to the gi
 
 
 
+
+
+**Inisights**
+
+# Book Analysis and Library Locator
+
+This repository contains Python scripts for analyzing book reviews, genre trends, author popularity, and language usage, as well as a script for locating the nearest libraries using the Google Maps API.
+
+## Book Reviews Analysis
+
+The `book_reviews_analysis.py` script takes user input and analyzes book reviews. 
+
+## Genre Trends Analysis
+
+The `genre_trends_analysis.py` script analyzes genre trends. It fetches data from the Google Books API and calculates the average rating for each genre.
+
+## Author Popularity Analysis
+
+The `author_popularity_analysis.py` script analyzes the popularity of authors. 
+
+## Language Analysis
+
+The `language_analysis.py` script analyzes the usage of different languages in books.
+
+
+
+## Library Locator
+
+The library locator script uses the Google Maps API to show the nearest libraries to a given location.
+
+## Usage
+
+To run these scripts, you need Python installed on your machine. You can run a script by navigating to the directory containing the script and running the following command in your terminal:
+
