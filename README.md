@@ -77,19 +77,24 @@ This repository contains Python scripts for analyzing book reviews, genre trends
 
 ## Book Reviews Analysis
 
-The `book_reviews_analysis.py` script takes user input and analyzes book reviews. 
+The `book_reviews_analysis.py` script fetches book data from the Google Books API based on user-provided queries. It then analyzes the average rating and total rating count for each book and plots these data on a bar chart. The top 10 books with the highest average rating and total rating count are displayed.
 
 ## Genre Trends Analysis
 
-The `genre_trends_analysis.py` script analyzes genre trends. It fetches data from the Google Books API and calculates the average rating for each genre.
+The `genre_trends_analysis.py` script fetches book data from the Google Books API based on user-provided genre queries. It then calculates the number of books and average rating for each genre and plots these data on a bar chart.
 
 ## Author Popularity Analysis
 
-The `author_popularity_analysis.py` script analyzes the popularity of authors. 
+The `author_popularity_analysis.py` script fetches book data from the Google Books API based on user-provided author queries. It then calculates the number of books and average rating for each author and plots these data on a bar chart.
 
 ## Language Analysis
 
-The `language_analysis.py` script analyzes the usage of different languages in books.
+The `language_analysis.py` script fetches book data from the Google Books API based on user-provided language codes. It then calculates the number of books for each language and plots these data on a bar chart.
+
+## Usage
+
+To run these scripts, you need Python installed on your machine. You can run a script by navigating to the directory containing the script and running the following command in your terminal:
+
 
 
 
