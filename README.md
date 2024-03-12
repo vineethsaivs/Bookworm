@@ -95,7 +95,9 @@ The `language_analysis.py` script fetches book data from the Google Books API ba
 
 To run these scripts, you need Python installed on your machine. You can run a script by navigating to the directory containing the script and running the following command in your terminal:
 
-
+```bash
+python <script_name>.py
+```
 
 
 
