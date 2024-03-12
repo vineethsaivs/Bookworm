@@ -95,17 +95,51 @@ The `language_analysis.py` script fetches book data from the Google Books API ba
 
 To run these scripts, you need Python installed on your machine. You can run a script by navigating to the directory containing the script and running the following command in your terminal:
 
-```bash
-python <script_name>.py
+
+
+
 
 
 ## Library Locator
 
-The library locator script uses the Google Maps API to show the nearest libraries to a given location.
+The library locator feature uses the Google Maps API to find the nearest libraries to a given location. The location is specified by latitude and longitude coordinates.
 
-## Usage
+### Python Script
 
-To run these scripts, you need Python installed on your machine. You can run a script by navigating to the directory containing the script and running the following command in your terminal:
+The `get_nearest_libraries(latitude, longitude)` function in the main Python script sends a GET request to the Google Maps API's `nearbysearch` endpoint. The request includes the latitude and longitude of the location, a radius of 5000 meters, the type of place to search for (libraries), and the API key. The function returns a list of the nearest libraries.
+
+The `get_libraries(request: Request, latitude: float, longitude: float)` function is a FastAPI endpoint that gets the nearest libraries to the given latitude and longitude and returns an HTML response with the libraries embedded in a Google Map.
+
+### HTML Template
+
+The `libraries.html` file is a Jinja2 template that displays a Google Map with markers for each library. The map is centered on the first library in the list. The latitude and longitude of each library are used to place the markers on the map. The name of each library is used as the title of its marker.
+
+Below the map, the template displays a list of the libraries. For each library, it displays the name and vicinity.
+
+### Usage
+
+To use the library locator feature, navigate to the `/libraries` endpoint in your web browser and provide the latitude and longitude as query parameters. For example:
+
+```
+http://127.0.0.1:8000/libraries?latitude=37.706252&longitude=-122.441907
+```
+
+This will display a map of the nearest libraries to the coordinates 37.706252, -122.441907.
+
+### Dependencies
+
+This feature depends on the following Python libraries:
+
+- fastapi
+- requests
+- json
+
+You can install these libraries using pip:
+
+```bash
+pip install fastapi requests json
+```
 
 ```bash
 python <script_name>.py
+```
