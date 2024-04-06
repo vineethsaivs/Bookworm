@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookworm - Genre</title>
+</head>
+<body>
+    <h1>Bookworm - Genre</h1>
+    {% for book in books %}
+        <!-- <a href="/book/{{ book.id.volumeInfo.industryIdentifiers[0].identifier }}">{{ book.volumeInfo.title }}</a> -->
+        <!-- <a href="/book/{{ book['id'] }}">{{ book['volumeInfo']['title'] }}</a> -->
+        <a href="/books/{{ book['id'] }}">{{ book['volumeInfo']['title'] }}</a>
+        <!-- <a href="/book/{{ book['id'] }}">{{ book['volumeInfo']['title'] }}</a> -->
+    {% endfor %}
+    <!-- {% for book in books %}
+    <a href="/book/{{ book['bookId'] }}">{{ book['title'] }}</a>
+    {% endfor %} -->
+</body>
+</html>

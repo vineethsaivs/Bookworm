@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Files</title>
+</head>
+<body>
+    {% for filename, score in files %}
+    <h2>{{ filename }}</h2>
+    <p>Relevance Score: {{ score }}</p>
+    {% endfor %}
+</body>
+</html>

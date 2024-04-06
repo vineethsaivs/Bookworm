@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Search Results</title>
+    <!-- Add any additional meta tags, styles, or links to external stylesheets here -->
+</head>
+<body>
+    <header>
+        <h1>Books Search Results</h1>
+        {% if query %}
+            <p>Showing results for "{{ query }}"</p>
+        {% endif %}
+    </header>
+    <section>
+        {% for book in books_data %}
+            <article>
+                <h2>{{ book.volumeInfo.title }}</h2>
+                <p>Author: {{ book.volumeInfo.authors | join(", ") if book.volumeInfo.authors else 'Unknown' }}</p>
+                <p>Publisher: {{ book.volumeInfo.publisher if book.volumeInfo.publisher else 'Unknown' }}</p>
+                <p><a href="{{ book.volumeInfo.link }}">View on Google Books</a></p>
+                <!-- Add more book details as needed -->
+            </article>
+        {% endfor %}
+    </section>
+    <!-- Add any additional content or scripts as needed -->
+</body>
+</html>

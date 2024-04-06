@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookworm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary-color: #000; /* Black */
+            --secondary-color: #fff; /* White */
+            --accent-color: #f00; /* Red */
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: background 0.5s;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .header h1 {
+            text-shadow: 2px 2px 4px var(--accent-color);
+            font-size: 5em;
+        }
+
+        .card {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px var(--accent-color);
+        }
+
+        .card img {
+            transition: transform 0.5s;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .overlay-inner {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        h1 {
+            font-size: 150px;
+            text-align: center;
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="bounce">Bookworm</h1>
+    <div>
+        <a href="/books/?q=python" class="button">Fetch books by keyword</a>
+        <a href="/books/RJxWIQOvoZUC" class="button">Fetch based on book id</a>
+        <a href="/books/9780307472395" class="button">Fetch based on book's isbn</a>
+        <a href="/genres/science" class="button">Fetch based on book's genre</a>
+        <a href="/authors/" class="button">Fetch authors</a>
+        <a href="/authors/Ayn%20Rand" class="button">Fetch based on particular author</a>
+        <a href="/publishers/O'Reilly" class="button">Fetch based on publisher</a>
+        <a href="/printtype/all" class="button">Fetch based on book's print_type</a>
+        <a href="/language/es" class="button">Fetch based on book's language</a>
+        <a href="/sort/relevance" class="button">Sort based on book's relevance</a>
+        <a href="/sort/newest/python" class="button">Sort based on book's newest and the keyword</a>
+        <a href="/pubdate/javascript" class="button">Fetch based on book's publishing date and keyword</a>
+        <a href="/histogram" class="button">Created a histogram for books</a>
+        <a href="/index/javascript" class="button">Implemented elastic search</a>
+        <a href="/search/javascript" class="button">Search</a>
+        <a href="/books" class="button">Go to Books</a>
+    </div>
+</body>
+</html>

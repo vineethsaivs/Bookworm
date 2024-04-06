@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookworm - Authors List</title>
+</head>
+<body>
+    <h1>Authors List</h1>
+    <ul>
+        {% for author in authors %}
+            <li><a href="/authors/{{ author }}">{{ author }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books by Publication Date</title>
+</head>
+<body>
+    <h1>Books by Publication Date</h1>
+    {% for book in books %}
+        <p><a href="{{ book.volumeInfo.previewLink }}" target="_blank">{{ book.volumeInfo.title }}</a> - {{ book.volumeInfo.publishedDate }}</p>
+    {% endfor %}
+</body>
+</html>

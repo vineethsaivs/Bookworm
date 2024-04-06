@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.volumeInfo.title }}</title>
+</head>
+<body>
+    <h1>{{ book.volumeInfo.title }}</h1>
+    <p>Author: {{ book.volumeInfo.authors | join(", ") if book.volumeInfo.authors else 'Unknown' }}</p>
+    <p>Publisher: {{ book.volumeInfo.publisher if book.volumeInfo.publisher else 'Unknown' }}</p>
+    <p>Published Date: {{ book.volumeInfo.publishedDate if book.volumeInfo.publishedDate else 'Unknown' }}</p>
+    <p>Description: {{ book.volumeInfo.description if book.volumeInfo.description else 'No description available' }}</p>
+    <p>Page Count: {{ book.volumeInfo.pageCount if book.volumeInfo.pageCount else 'Unknown' }}</p>
+    <p>Categories: {{ book.volumeInfo.categories | join(", ") if book.volumeInfo.categories else 'Unknown' }}</p>
+    <p>Average Rating: {{ book.volumeInfo.averageRating if book.volumeInfo.averageRating else 'No rating' }}</p>
+    <p>Ratings Count: {{ book.volumeInfo.ratingsCount if book.volumeInfo.ratingsCount else 'No ratings' }}</p>
+    <p><a href="{{ book.volumeInfo.link }}">View on Google Books</a></p>
+</body>
+</html>

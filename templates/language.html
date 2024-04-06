@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books by Language</title>
+</head>
+<body>
+    <!-- <h1>Books by Language</h1>
+    {% for book in books %}
+        <p>{{ book.volumeInfo.title }}</p>
+    {% endfor %} -->
+
+    <h1>Books by Language</h1>
+    {% for book in books %}
+        <p><a href="{{ book.volumeInfo.previewLink }}" target="_blank">{{ book.volumeInfo.title }}</a></p>
+    {% endfor %}
+</body>
+</html>

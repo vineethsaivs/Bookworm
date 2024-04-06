@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books by Publisher</title>
+</head>
+<body>
+    <h1>Books by Publisher</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{{ book.volumeInfo.infoLink }}">
+                    {{ book.volumeInfo.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

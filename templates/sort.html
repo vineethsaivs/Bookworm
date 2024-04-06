@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Sorted by {{ order }}</title>
+</head>
+<body>
+    <h1>Books Sorted by {{ order }}</h1>
+    {% for book in books %}
+        <p><a href="{{ book.volumeInfo.previewLink }}" target="_blank">{{ book.volumeInfo.title }}</a></p>
+    {% endfor %}
+</body>
+</html>

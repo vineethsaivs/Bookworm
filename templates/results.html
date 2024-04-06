@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Selected Genre Books</h1>
+    {% for book in selected_genre_books %}
+    <h2>{{ book.volumeInfo.title }}</h2>
+    <p>Categories: {{ book.volumeInfo.categories|join(", ") }}</p>
+    {% endfor %}
+</body>
+</html>

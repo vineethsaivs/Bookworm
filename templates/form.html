@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>All Books</h1>
+    {% if all_books %}
+        {% for book in all_books %}
+            <p>{{ book.volumeInfo.title }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form action="/books/results" method="post">
+        <label for="genre">Enter a genre:</label><br>
+        <input type="text" id="genre" name="genre"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
